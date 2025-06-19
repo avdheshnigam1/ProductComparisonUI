@@ -1,0 +1,73 @@
+@use './variable' as v;
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
+.product-card {
+  background: transparent;
+  border-radius: 1rem;
+  padding: 1rem 1rem 0 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+
+  img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 100;
+    margin: 0.2rem 0;
+
+  }
+
+  .price {
+    color: v.$theme-primary;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .features {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+
+    p {
+      margin: 0.25rem 0;
+    }
+  }
+
+  .compare-checkbox {
+    font-size: 0.9rem;
+
+    input {
+      margin-right: 0.5rem;
+    }
+  }
+
+  .card-footer {
+    background-color: v.$theme-primary;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    text-align: center;
+    border-radius: 0 0 1rem 1rem;
+    cursor: pointer;
+
+    body.dark &.card-footer {
+      background-color: v.$theme-primary-dark;
+    }
+  }
+}

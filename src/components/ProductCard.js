@@ -17,14 +17,16 @@ const ProductCard = ({ product }) => {
         <p><strong>Screen:</strong> {product.features.screen}</p>
         <p><strong>Battery:</strong> {product.features.battery}</p>
       </div>
-      <label className="compare-checkbox">
-        <input
-          type="checkbox"
-          checked={isSelected}
-          onChange={() => dispatch(toggleCompare(product.id))}
-        />
-        Add to Compare
-      </label>
+      <div className="card-footer">
+        <label className="compare-checkbox">
+          <input
+            type="checkbox"
+            checked={isSelected}
+            onChange={() => dispatch(toggleCompare(product.id))}
+          />
+          Add to Compare
+        </label>
+      </div>
     </div>
   );
 };

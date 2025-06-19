@@ -1,0 +1,41 @@
+@use './variable' as v;
+
+body.dark {
+  background: #121212;
+  color: v.$primary-color;
+
+  .product-card {
+    background: #1f1f1f;
+    color: v.$primary-color;
+    border-color: v.$border-primary-color;
+  }
+
+  .compare-bar {
+    background: #1f1f1f;
+    color: v.$primary-color;
+    border-color: v.$border-primary-color;
+    border-top: 1px solid #444;
+  }
+
+  .comparison-view {
+    table {
+      background: #1f1f1f;
+      color: v.$primary-color;
+      border-color: v.$border-primary-color;
+
+      th {
+        background: #2a2a2a;
+      }
+    }
+  }
+
+  .highlight {
+    background-color: v.$background-primary-color !important;
+  }
+
+  .search-input {
+    background: #333;
+    color: v.$secondary-color;
+    border: 1px solid #555;
+  }
+}

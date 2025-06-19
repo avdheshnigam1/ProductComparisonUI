@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCompare, removeFromCompare } from '../features/products/productsSlice';
+import { IoIosCloseCircleOutline } from "react-icons/io";
 
 const CompareBar = () => {
   const dispatch = useDispatch();
@@ -14,7 +15,9 @@ const CompareBar = () => {
         {selected.map(item => (
           <div key={item.id} className="item-thumb">
             <img src={item.image} alt={item.name} />
-            <button onClick={() => dispatch(removeFromCompare(item.id))}>❌</button>
+            <button onClick={() => dispatch(removeFromCompare(item.id))}>
+              <IoIosCloseCircleOutline />
+            </button>
           </div>
         ))}
       </div>

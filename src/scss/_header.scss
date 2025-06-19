@@ -1,0 +1,148 @@
+@use './variable' as v;
+
+header {
+  background: #fff;
+
+  body.dark & {
+    background: #121212;
+  }
+
+  padding: 5px 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  body.dark & {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1024;
+
+  nav {
+    height: 50px;
+    overflow-y: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0 auto;
+      padding: 15px 15px;
+      overflow-x: auto;
+      white-space: nowrap;
+
+      li {
+        margin-right: 15px;
+
+        &.active {
+          border-bottom: 2px solid v.$theme-primary;
+        }
+
+        body.dark & {
+          &.active {
+            border-bottom: 2px solid v.$theme-primary;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: #333;
+          font-weight: 800;
+
+
+          body.dark & {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  h1 {
+    font-size: 21px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    text-decoration: none;
+    background: #d5df15;
+    font-weight: bold;
+    line-height: 1.2;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+
+    span {
+      &:nth-child(1) {
+        color: #aea639;
+      }
+
+      &:nth-child(2) {
+        color: #8e8506;
+      }
+
+      &:nth-child(3) {
+        color: #aea639;
+      }
+    }
+  }
+
+  .theme-toggle {
+    display: flex;
+    background: v.$theme-primary;
+    border: 1px dotted v.$theme-primary;
+    color: #fff;
+    padding: .5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+
+    svg {
+      margin-right: 0.5rem;
+    }
+
+    i {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    body.dark & {
+      color: #fff;
+      border: 1px dotted v.$theme-primary-dark;
+      background: v.$theme-secondary-dark;
+
+      &:hover {
+        background: v.$theme-secondary-dark;
+        color: #fff;
+      }
+    }
+
+    &:hover {
+      background: v.$theme-primary;
+      color: #fff;
+    }
+  }
+}
+
+// body.dark header {
+//   background: #121212;
+//   color: v.$primary-color;
+// }
+
+// body.dark header nav ul li a {
+//   color: v.$primary-color;
+// }

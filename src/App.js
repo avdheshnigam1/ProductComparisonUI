@@ -9,6 +9,7 @@ const App = () => {
   const products = useSelector(state => state.products.list);
   const compare = useSelector(state => state.products.compare);
   const [query, setQuery] = useState('');
+
   const filteredProducts = products.filter(product =>
     product.name.toLowerCase().includes(query.toLowerCase()) ||
     product.brand.toLowerCase().includes(query.toLowerCase())
@@ -18,13 +19,15 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <input
-        type="text"
-        placeholder="Search by name or brand..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        className="search-input"
-      />
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="Search by name or brand..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          className="search-input"
+        />
+      </div>
 
       <div className="product-grid">
         {/* {products.map(product => (

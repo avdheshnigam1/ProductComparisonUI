@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeFromCompare, clearCompare } from '../features/products/productsSlice';
+import { IoIosCloseCircleOutline } from "react-icons/io";
 
 const ComparisonView = () => {
   const dispatch = useDispatch();
@@ -14,15 +15,17 @@ const ComparisonView = () => {
   };
 
   return (
-    <div className="comparison-view">
+    <section className="comparison-view">
       <table>
         <thead>
           <tr>
             <th>Attribute</th>
             {selected.map(p => (
               <th key={p.id}>
-                {p.name}<br />
-                <button onClick={() => dispatch(removeFromCompare(p.id))}>❌</button>
+                {p.name}
+                <button onClick={() => dispatch(removeFromCompare(p.id))}>
+                  <IoIosCloseCircleOutline color="red" size="20" />
+                </button>
               </th>
             ))}
           </tr>
@@ -53,7 +56,7 @@ const ComparisonView = () => {
       <div className="actions">
         <button onClick={() => dispatch(clearCompare())}>Clear Comparison</button>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,0 +1,20 @@
+@use './variable' as v;
+
+footer {
+  background: #fff;
+  color: v.$theme-primary;
+
+  body.dark & {
+    background: v.$theme-secondary-dark;
+    color: v.$primary-color;
+  }
+
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+}
