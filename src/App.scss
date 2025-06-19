@@ -25,11 +25,14 @@ body {
 
   p {
     text-align: center;
-    font-size: 1.2rem;
-    margin-top: 2rem;
   }
 
-  h2 {
+  >h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 100;
     color: v.$theme-primary;
 
     body.dark & {
@@ -37,7 +40,6 @@ body {
     }
 
     span {
-      float: right;
       font-size: 0.8rem;
       color: v.$theme-primary;
 
