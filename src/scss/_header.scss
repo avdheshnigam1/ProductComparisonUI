@@ -74,17 +74,18 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 21px;
     text-decoration: none;
     background: #d5df15;
-    font-weight: bold;
-    line-height: 1.2;
     border-radius: 50%;
     height: 60px;
     width: 60px;
     text-align: center;
 
     span {
+      font-weight: bold;
+      line-height: 1.2;
+      font-size: 21px;
+
       &:nth-child(1) {
         color: #aea639;
       }

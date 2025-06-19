@@ -2,8 +2,8 @@
 
 .search-bar {
   background: #fff;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  // border-bottom-left-radius: 10px;
+  // border-bottom-right-radius: 10px;
 
   body.dark & {
     background: v.$theme-primary-dark;
@@ -13,7 +13,7 @@
   padding: 3px 15px;
   position: sticky;
   top: 70px;
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
 
   input {
     width: 100%;

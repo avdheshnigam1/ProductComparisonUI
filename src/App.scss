@@ -5,11 +5,16 @@
 @use './scss/comparebar';
 @use './scss/search';
 @use './scss/dark';
+@use './scss/breadcrumb';
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 0 15px;
   background: #f6f8fa;
   color: #333;
 }
@@ -17,4 +22,29 @@ body {
 .App {
   max-width: v.$containerWidth;
   margin: 0 auto;
+
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  h2 {
+    color: v.$theme-primary;
+
+    body.dark & {
+      color: v.$primary-color;
+    }
+
+    span {
+      float: right;
+      font-size: 0.8rem;
+      color: v.$theme-primary;
+
+      body.dark & {
+        color: v.$primary-color;
+      }
+    }
+  }
+
 }

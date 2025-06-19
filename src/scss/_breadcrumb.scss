@@ -1,0 +1,30 @@
+@use './variable' as v;
+
+.breadcrumb {
+  display: flex;
+  list-style: none;
+  background-color: #e9ecef;
+
+  body.dark & {
+    background: v.$theme-secondary-dark;
+  }
+
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+
+  li {
+    a {
+      color: v.$theme-primary;
+    }
+
+    +li {
+      padding-left: 0.5rem;
+      margin-left: 0.5rem;
+      border-left: 1px solid v.$theme-primary;
+
+      body.dark & {
+        border-left: 1px solid #444;
+      }
+    }
+  }
+}
