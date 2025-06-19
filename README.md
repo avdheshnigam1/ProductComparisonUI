@@ -3,8 +3,8 @@
 ## Setup Instructions
 
 1. Clone the repo
-2. Run `npm install`
-3. Start app: `npm run dev` (or `npm start`)
+2. Run `npm install` (or `npm i`)
+3. Start app: `npm run start`
 
 ## Features
 
